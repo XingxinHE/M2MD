@@ -341,7 +341,7 @@ ToImageElement[cell_,  patt : OptionsPattern[]]:=
   , _String | _File, exportURL /. File -> Identity
   , None | _       , Return["", Module]
   ]  
-; exportPath = FileNameJoin[{exportDir, baseName<>".png"}]
+; exportPath = FileNameJoin[{exportDir, baseName<>".svg"}]
 
 ; fetchDir  = Switch[       fetchURL
   , Automatic             , exportDir
@@ -349,7 +349,7 @@ ToImageElement[cell_,  patt : OptionsPattern[]]:=
   , _String | _URL | _File, fetchURL
   , _                     , Return["", Module]
   ]
-; fetchPath = urlNameJoin[{fetchDir, baseName<>".png"}]
+; fetchPath = urlNameJoin[{fetchDir, baseName<>".svg"}]
 
 ; If[
     overwriteQ && FileExistsQ[exportPath]
